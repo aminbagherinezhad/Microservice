@@ -1,0 +1,12 @@
+name: dockercompose9131394844187884894
+services:
+  serverside.core.cw:
+    build:
+      context: E:\Microservice\MicroserviceLog
+      dockerfile: ServerSide.Core.CW\Dockerfile
+    image: serversidecorecw
+    networks:
+      default: null
+networks:
+  default:
+    name: dockercompose9131394844187884894_default

@@ -1,0 +1,25 @@
+name: dockercompose9131394844187884894
+services:
+  serverside.grpc:
+    build:
+      context: E:\Microservice\MicroserviceLog
+      dockerfile: ServerSide.Grpc/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: serversidegrpc
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\radshid-pc\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose9131394844187884894_default

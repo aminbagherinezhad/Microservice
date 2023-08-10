@@ -1,0 +1,2 @@
+obj\Debug\net7.0/ServerSide.cs \
+obj\Debug\net7.0/ServerSideGrpc.cs: ../ServerSide.Grpc/Protos/ServerSide.proto

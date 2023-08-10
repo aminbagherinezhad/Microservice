@@ -1,0 +1,2 @@
+obj\Debug\net7.0/Log.cs \
+obj\Debug\net7.0/LogGrpc.cs: ../GrpcService1/Protos/Log.proto

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  serverside.grpc:
+    image: ${DOCKER_REGISTRY-}serversidegrpc
+    build:
+      context: .
+      dockerfile: ServerSide.Grpc/Dockerfile

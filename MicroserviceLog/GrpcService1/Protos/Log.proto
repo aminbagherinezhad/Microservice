@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService1.Protos";
+
+service ServerSideProtoService{
+	rpc GetDiscount (GetDiscountRequest) returns (LoggerModel);
+	rpc CreatetLog (CreateLogRequest) returns (LoggerModel);
+	rpc GetAll (GetAllRequest) returns (GetAllResponse);
+}
+
+message GetDiscountRequest {
+	string productName = 1;
+}
+message LoggerModel {
+	int32 Id=1;
+	string MessageLogs=2;
+}
+
+message CreateLogRequest {
+
+	LoggerModel logger=1;
+}
+
+message GetAllRequest {}
+
+message GetAllResponse {
+    repeated LoggerModel loggers = 1;
+}
